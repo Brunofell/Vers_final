@@ -21,7 +21,7 @@ body{
 }
 
 .principal{
-    /* background-image: url("./img/saguaoHotel.jpg"); */
+    /* background-image: url("/src/assets/saguaoHotel.jpg"); */
     background-repeat: no-repeat;
     background-position: right top;
     background-size: 40% auto;
