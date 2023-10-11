@@ -74,7 +74,8 @@ body{
 }
 
 .secundario_img{
-    width: 80%;
+    width: 200px; /* Largura desejada */
+    height: auto; /* Altura automática para manter a proporção original */
 }
 
 .secundario{
