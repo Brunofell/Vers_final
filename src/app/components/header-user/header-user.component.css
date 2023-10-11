@@ -1,0 +1,40 @@
+a {
+    text-decoration: none;
+    color: #444;
+    transition: .4s;
+}
+
+a:hover{
+    color:#5F9DF7;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    border-bottom: 1px solid #777;
+    position:static;
+}
+
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.links li{
+    margin-right: 1em;
+    list-style: none;
+}
+
+#add a{
+    color: #dec129;
+}
+
+#add a:hover{
+    background-color: #efefef;
+} 
+
+

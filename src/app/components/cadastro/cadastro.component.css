@@ -1,0 +1,29 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    padding: 1rem;
+    
+  }
+  
+.botao{
+  }
+  
+h1{
+    text-align: center;
+  }
+  
+form{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 1em;
+  }

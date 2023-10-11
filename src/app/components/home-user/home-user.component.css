@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Krona+One&family=Montserrat:wght@600&family=Sedgwick+Ave+Display&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte_titulo: 'Inter', sans-serif;
+    --botao-efeito: #3c92fa;
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte_titulo);
+}
+
+.principal{
+    background-image: url("./img/saguaoHotel.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 40% auto;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__titulo{
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.container__img{
+    margin: 1em 0 2em 0;
+}
+.container__botao{
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    text-decoration: none;
+    color: var(--branco-principal);
+    display: block;
+    margin-bottom: 1em;
+}
+
+.container__botao:hover{
+    color: var(--cor-de-fundo);
+    background-color: var(--botao-efeito);
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso{
+    color: var(--cinza-secundario);
+    font-size: 12px;
+}
+
+.container__caixa{
+    margin: 0 6em;
+}
+
+.secundario_img{
+    width: 80%;
+}
+
+.secundario{
+    align-items: center;
+    margin: 0em 7em; /* 0 pro topo e abaixo e 6 para os lados*/
+}
+
+.container__descricao__texto{
+    font-size: 16px;
+    color: var(--cinza-secundario);
+}
+
+.container__descricao__titulo{
+    color: var(--botao-azul);
+    margin-bottom: 0.1em;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.secundario__botao{
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao{
+    padding: 2em;
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.lista__item{
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape{
+    text-align: center;
+    margin-top: 10em;
+    margin-bottom: 5em;
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin: 2em;
+    list-style-type: none;
+}
+
+.rodape__texto{
+    margin: 2em;
+    color: var(--cinza-secundario);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.lista__link{
+    font-family: var(--fonte_titulo);
+    color: var(--branco-principal);
+}
+
+.boa{
+    color: var(--branco-principal);
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.lista__link a:hover{
+    color: var(--botao-azul);
+}
+
+.lista__link a:active{
+    color: brown;
+}

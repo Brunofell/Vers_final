@@ -1,0 +1,54 @@
+<app-header-user></app-header-user>
+<section class="formulario">
+    <div class="container">
+        <form action="" class="container__form">
+            <h1>Reserva</h1>
+            <h2>Dados do Hospede: </h2>
+            <div class="container__input">
+                <p class="input__titulo">Nome Completo</p>
+                <input type="text" class="container__input__area">
+                <p class="input__titulo">Email</p>
+                <input type="email" class="container__input__area">
+                <p class="input__titulo">Telefone</p>
+                <input type="text" class="container__input__area">
+                <p class="input__titulo">Data de Nascimento</p>
+                <input type="date" class="container__input__area input__data">
+            </div>
+
+            <h2>Detalhes da reserva: </h2>
+            <div class="container__input">
+                <p class="input__titulo">Check-in</p>
+                <input type="text" class="container__input__area input__data">
+                <p class="input__titulo">Check-out</p>
+                <input type="email" class="container__input__area input__data">
+                <p class="input__titulo">Tipo de quarto</p>
+                <select id="quarto" class="container__input__area input__select">
+                    <option value="individual" class="select__opcao">Individual</option>
+                    <option value="duplo" class="select__opcao">Duplo</option>
+                    <option value="suíte" class="select__opcao">Suíte</option>
+                </select>
+            </div>
+
+            <h2>Informações de Pagamento: </h2>
+            <div class="container__input">
+                <p class="input__titulo">Tipo de pagamento</p>
+                <p class="subtitulo">* O pagamento será realizado no hotel.</p>
+                <select id="quarto" class="container__input__area input__select">
+                    <option value="credito" class="select__opcao">Crédito</option>
+                    <option value="debito" class="select__opcao">Débito</option>
+                    <option value="pix" class="select__opcao">Pix</option>
+                    <option value="dinheiro" class="select__opcao">Dinheiro</option>
+                </select>
+            </div>
+
+            <div class="container__input">
+                <p>
+                    <input type="checkbox" >
+                    Concordo que li e aceito os termos de uso
+                </p>
+            </div>
+
+            <button type="submmit" >Enviar</button>
+    </form>  
+    </div>
+</section>
