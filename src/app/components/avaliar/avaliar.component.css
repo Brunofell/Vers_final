@@ -1,0 +1,40 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    padding: 1rem;
+      
+  }
+    
+  h1{
+  
+    text-align: center;
+  }
+  
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 500px;
+    margin: 0 auto;
+  }
+    
+  input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 1em;
+  }
+  
+  .form__button{
+    padding: .5em;
+    background-color: #FF731D;
+    border-radius: 1em;
+    border-style: none;
+    margin-top: 7em;
+    margin-bottom: 2em;
+  }
+  
+  .form__button:hover{
+    background-color: #ac521a;
+  }

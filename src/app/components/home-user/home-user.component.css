@@ -25,10 +25,11 @@
     border-radius: 7px;
     margin-bottom: 1em;
     text-decoration: none;
-    color: #0d0e55;
+    color: #000000;
     width: 70%;
 }
 
 .container__buttons__a:hover{
     background-color: #ac521a;
+    color: #FFF7E9;
 }
