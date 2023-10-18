@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .nav-item{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .nav-item:hover{
+    opacity: 0.7;
+  }
+  
+  .logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    height: 8vh;
+  }
+  
+  .nav-link{
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-link li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+  
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .pfp{
+    height: 210px;
+    width: 210px;
+    position: relative;
+    border: 5px solid blue;
+    border-radius: 50%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .pfp img{
+    border-radius: 50%;
+  }
+  
+  .camera{
+    position: absolute;
+    bottom: 0;
+    outline: none;
+    color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    cursor: pointer;
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+  }
+  
+  .camera::-webkit-file-upload-button{
+    visibility: hidden;
+  }
+  
+  .camera::before{
+    position: relative;
+    content: '\f030';
+    font-family: fontAwesome;
+    font-size: 35px;
+    left: 68px;
+    top: -5px;
+    color: white;
+    display: inline-block;
+    -webkit-user-select: none;
+  }
+  
+  .camera::after{
+    content: 'Update';
+    font-family: arial;
+    font-weight: bold;
+    color: white;
+    display: block;
+    top: 45px;
+    left: 81px;
+    font-size: 14px;
+    position: absolute;
+  }
+  
+  .camera:hover{
+    opacity: 1;
+  }
+  
+  .caixa .informaUser{ 
+      position: relative;
+      width: 550px;
+      height: 440px;
+      background: transparent;
+      border-radius: 25px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      display: flex;  
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px 0 25px 0;
+      padding: 10px;
+  }
+  
+  form .informaUser .Input{
+      width: calc(100% / 2 - 25px);
+  }
+  
+  .informaUser .Input input{
+    height: 32px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: solid 1px;
+    padding-left: 15px;
+    font-size: 13px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .informaUser .Input input:focus,
+  .informaUser .Input input:focus{
+    border-color: blue;
+  }
+  
+  .informaUser .Input .detalhes{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  h1{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  
+  h1::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: blue;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .button{
+    height: 45px;
+    margin: 45px 0;
+    width: 100%;
+  }
+  .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    background: linear-gradient(135deg, #0000FF, #00BFFF);
+    font-size: 18 px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+  }
+  
+  .button input:hover{
+    background: linear-gradient(-135deg, #0000FF, #00BFFF);
+  }
+  
+  
+  @media (max-width: 500px){
+    .caixa{
+      max-width: 100%;
+    }
+    form .informaUser .Input{
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    .caixa form .informaUser{
+      max-height: 300px;
+      overflow-y: scroll;
+    }
+    .informaUser::-webkit-scrollbar{
+        width: 0;
+    }
+  }
