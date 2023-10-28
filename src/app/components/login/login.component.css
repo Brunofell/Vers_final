@@ -1,29 +1,18 @@
-body{
-    font-family: 'Courier New', Courier, monospace;
-    box-sizing: border-box;
-    padding: 1rem;
-    
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css"; 
+@import "~bootstrap-social/bootstrap-social.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+  img{
+    margin-left: 52rem;
+    margin-top: -30.5rem; 
+   
   }
-  
-.botao{
-  }
-  
-h1{
-    text-align: center;
-  }
-  
-form{
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    width: 500px;
-    margin: 0 auto;
-  }
-  
-input{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    font-size: 1em;
-  }
+.form {
+    width: 340px;
+    margin: 50px auto;
+    font-size: 15px;
+    margin-top: 5rem;
+}
