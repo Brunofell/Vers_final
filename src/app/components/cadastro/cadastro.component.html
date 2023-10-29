@@ -1,21 +1,49 @@
 <app-header></app-header>
-<section class="formulario">
-    <div class="container">
-        <form action="" class="container__form">
-            <h1>cadastro</h1>
-            <div class="container__input">
-                <p class="input__titulo">Nome Completo</p>
-                <input type="text" class="container__input__area" placeholder="nome completo">
-                <p class="input__titulo">Email</p>
-                <input type="email" class="container__input__area" placeholder="email">
-                <p class="input__titulo">Senha</p>
-                <input type="text" class="container__input__area" placeholder="***********">
-                <p class="input__titulo">Confirme a senha</p>
-                <input type="text" class="container__input__area" placeholder="***********">
-                
+ 
+<section class="vh-10">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 text-black">
+
+        
+        <div class="d-flex align-items-center h-custom-1 px-5 ms-xl-0 mt-5 pt-0 pt-xl-0 mt-xl-n3">
+
+          <form  id ="form"style="width: 23rem;">
+      
+            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign up</h3>
+
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form2Example18">Email address</label>
+              <input type="email" id="form2Example18" class="form-control form-control-lg" />
+             
             </div>
 
-            <button routerLink="/homeUser" type="submmit" class="botao">entrar</button>
-    </form>  
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form2Example28">Password</label>  
+              <input type="password" id="form2Example28" class="form-control form-control-lg" />
+              <label class="form-label" for="form2Example28">Confirm password</label>  
+              <input type="password" id="form2Example28" class="form-control form-control-lg" />
+             
+            </div>
+
+            <div class="pt-1 mb-4">
+              <button class="btn btn-info btn-lg btn-block" type="button" routerLink="/">Cadastrar</button>
+            </div>
+
+           
+
+          </form>
+
+        </div>
+
+      </div>
+      
+      <div class="col-sm-6 px-0 d-none d-sm-block">
+        <img src="https://gestaoempresarial.eu/wp-content/uploads/2020/05/Fachada-Sul.jpg"
+          alt="Login image" class="" style="object-fit: cover; object-position: left;">
+      </div>
     </div>
+  </div>
+
+
 </section>

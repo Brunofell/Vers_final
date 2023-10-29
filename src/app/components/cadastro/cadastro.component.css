@@ -1,24 +1,5 @@
-body{
-    font-family: 'Courier New', Courier, monospace;
-    box-sizing: border-box;
-    padding: 1rem;
-    
-  }
-  
-.botao{
-  }
-  
-h1{
-    text-align: center;
-  }
-  
-form{
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    width: 500px;
-    margin: 0 auto;
-  }
+@import "~bootstrap/dist/css/bootstrap.css";
+ 
   
 input{
     width: 100%;
@@ -27,3 +8,12 @@ input{
     border-radius: 2px;
     font-size: 1em;
   }
+  img{
+    margin-left: 50rem;
+    margin-top: -30.5rem; 
+    width: 45rem;
+    height: 35rem;
+
+  }
+  
+ 

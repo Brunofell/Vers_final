@@ -4,7 +4,13 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 200px;
+    height: 100%;
+    width: 100%;
+
+    
+}
+*{
+    background-color: antiquewhite;
 }
 
 footer h3{

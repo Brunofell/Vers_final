@@ -1,8 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 *{
-    background-color: #FFF7E9;
+    
     font-family: 'Merriweather', serif;
+}
+html{
+    background-color:antiquewhite;
 }
 
 /* Mexer aqui so pra alterar o visual das coisas que vão ser semrpe iguais
