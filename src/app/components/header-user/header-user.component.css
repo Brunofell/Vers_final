@@ -1,40 +1,25 @@
-a {
+@import "~bootstrap/dist/css/bootstrap.css";
+
+  .container{
+    margin-top: 5rem;
+    margin-left: -100rem;
+    background-color: aquamarine;
+  }
+  *{
+    margin-left: -0.2rem;
+    top: -0.4rem;
+    margin-right: -0.3rem;
+  }
+
+  .nav-item{
+    margin-left: 2rem;
+    display: flex;
     text-decoration: none;
-    color: #444;
-    transition: .4s;
-}
-
-a:hover{
-    color:#5F9DF7;
-}
-
-nav{
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    border-bottom: 1px solid #777;
-    position:static;
-}
-
-
-.links{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.links li{
-    margin-right: 1em;
-    list-style: none;
-}
-
-#add a{
-    color: #dec129;
-}
-
-#add a:hover{
-    background-color: #efefef;
-} 
-
-
+  }
+    .navbar[_ngcontent-ng-c1706642737] > .container[_ngcontent-ng-c1706642737], .navbar[_ngcontent-ng-c1706642737] > .container-fluid[_ngcontent-ng-c1706642737], .navbar[_ngcontent-ng-c1706642737] > .container-sm[_ngcontent-ng-c1706642737], .navbar[_ngcontent-ng-c1706642737] > .container-md[_ngcontent-ng-c1706642737], .navbar[_ngcontent-ng-c1706642737] > .container-lg[_ngcontent-ng-c1706642737], .navbar[_ngcontent-ng-c1706642737] > .container-xl[_ngcontent-ng-c1706642737], .navbar[_ngcontent-ng-c1706642737] > .container-xxl[_ngcontent-ng-c1706642737] {
+      display: flex;
+      flex-wrap: inherit;
+      align-items: center;
+      justify-content: start;
+    
+    }
