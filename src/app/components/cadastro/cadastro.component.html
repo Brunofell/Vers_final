@@ -1,49 +1,27 @@
 <app-header></app-header>
- 
-<section class="vh-10">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-6 text-black">
 
-        
-        <div class="d-flex align-items-center h-custom-1 px-5 ms-xl-0 mt-5 pt-0 pt-xl-0 mt-xl-n3">
-
-          <form  id ="form"style="width: 23rem;">
-      
-            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign up</h3>
-
-            <div class="form-outline mb-4">
-              <label class="form-label" for="form2Example18">Email address</label>
-              <input type="email" id="form2Example18" class="form-control form-control-lg" />
-             
-            </div>
-
-            <div class="form-outline mb-4">
-              <label class="form-label" for="form2Example28">Password</label>  
-              <input type="password" id="form2Example28" class="form-control form-control-lg" />
-              <label class="form-label" for="form2Example28">Confirm password</label>  
-              <input type="password" id="form2Example28" class="form-control form-control-lg" />
-             
-            </div>
-
-            <div class="pt-1 mb-4">
-              <button class="btn btn-info btn-lg btn-block" type="button" routerLink="/">Cadastrar</button>
-            </div>
-
-           
-
-          </form>
-
+<section class="login" style="background-image: url('assets/fundocadastro.jpg');">
+  <div class="login-form">
+      <h2>Cadastro</h2>
+      <form>
+          <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="name">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
         </div>
-
-      </div>
-      
-      <div class="col-sm-6 px-0 d-none d-sm-block">
-        <img src="https://gestaoempresarial.eu/wp-content/uploads/2020/05/Fachada-Sul.jpg"
-          alt="Login image" class="" style="object-fit: cover; object-position: left;">
-      </div>
-    </div>
+          <div class="form-group">
+              <label for="password">Senha:</label>
+              <input type="password" id="password" name="password" required>
+          </div>
+          <div class="form-group">
+            <label for="confpassword">Confirmar a Senha:</label>
+            <input type="password" id="confpassword" name="confpassword" required>
+        </div>
+          
+          <button type="submit" class="login-btn" routerLink="/">Cadastrar</button>
+      </form>
   </div>
-
-
 </section>
