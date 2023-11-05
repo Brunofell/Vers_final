@@ -1,49 +1,65 @@
 <app-header-user></app-header-user>
+
+<div class="background-image" style="background-image: url('assets/fundologin.jpg');"></div>
 <section class="formulario">
     <div class="container">
         <form action="" class="container__form">
-            <h1>Reserva</h1>
-            <h2>Dados do Hospede: </h2>
+            <h1 class="form__titulo">Reserva</h1>
+            <h2 class="form__subtitulo">Dados do Hóspede:</h2>
             <div class="container__input">
-                <p class="input__titulo">Nome Completo</p>
-                <input type="text" class="container__input__area">
-                <p class="input__titulo">Email</p>
-                <input type="email" class="container__input__area">
-                <p class="input__titulo">Telefone</p>
-                <input type="text" class="container__input__area">
-                <p class="input__titulo">Data de Nascimento</p>
-                <input type="date" class="container__input__area input__data">
+                <div class="form-group">
+                    <label for="nome" class="input__titulo">Nome Completo</label>
+                    <input type="text" id="nome" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="input__titulo">Email</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone" class="input__titulo">Telefone</label>
+                    <input type="text" id="telefone" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataNascimento" class="input__titulo">Data de Nascimento</label>
+                    <input type="date" id="dataNascimento" class="form-control input__data" required>
+                </div>
             </div>
 
-            <h2>Detalhes da reserva: </h2>
+            <h2 class="form__subtitulo">Detalhes da Reserva:</h2>
             <div class="container__input">
-                <p class="input__titulo">Check-in</p>
-                <input type="text" class="container__input__area input__data">
-                <p class="input__titulo">Check-out</p>
-                <input type="email" class="container__input__area input__data">
-                <p class="input__titulo">Tipo de quarto</p>
-                <select id="quarto" class="container__input__area input__select">
-                    <option value="individual" class="select__opcao">Individual</option>
-                    <option value="duplo" class="select__opcao">Duplo</option>
-                    <option value="suíte" class="select__opcao">Suíte</option>
-                </select>
+                <div class="form-group">
+                    <label for="checkIn" class="input__titulo">Check-in</label>
+                    <input type="date" id="checkIn" class="form-control input__data" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkOut" class="input__titulo">Check-out</label>
+                    <input type="date" id="checkOut" class="form-control input__data" required>
+                </div>
+                <div class="form-group">
+                    <label for="quarto" class="input__titulo">Tipo de Quarto</label>
+                    <select id="quarto" class="form-control input__select">
+                        <option value="individual">Individual</option>
+                        <option value="duplo">Duplo</option>
+                        <option value="suíte">Suíte</option>
+                    </select>
+                </div>
             </div>
 
-            <h2>Informações de Pagamento: </h2>
+            <h2 class="form__subtitulo">Informações de Pagamento:</h2>
             <div class="container__input">
-                <p class="input__titulo">Tipo de pagamento</p>
-                <p class="subtitulo">* O pagamento será realizado no hotel.</p>
-                <select id="quarto" class="container__input__area input__select">
-                    <option value="credito" class="select__opcao">Crédito</option>
-                    <option value="debito" class="select__opcao">Débito</option>
-                    <option value="pix" class="select__opcao">Pix</option>
-                    <option value="dinheiro" class="select__opcao">Dinheiro</option>
-                </select>
+                <div class="form-group">
+                    <label for="pagamento" class="input__titulo">Tipo de Pagamento</label>
+                    <p class="subtitulo">* O pagamento será realizado no hotel.</p>
+                    <select id="pagamento" class="form-control input__select">
+                        <option value="credito">Crédito</option>
+                        <option value="debito">Débito</option>
+                        <option value="pix">Pix</option>
+                        <option value="dinheiro">Dinheiro</option>
+                    </select>
+                </div>
             </div>
 
-        
-
-            <button type="submmit" class="form__button">Enviar</button>
-    </form>  
+            <button type="submit" class="form__button">Enviar</button>
+        </form>
     </div>
 </section>
