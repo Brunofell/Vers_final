@@ -1,53 +1,38 @@
-<!DOCTYPE html>
-<html lang="pt">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
-        <link rel="stylesheet" href="perfil.component.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <title>Profile</title>
-    </head>
-    <body>
-        <app-header-user></app-header-user>
-        <main>
-            <div class="caixa">
-                <form action="#"> 
-                    <div class="pfp">
-                        <input type="file" class="camera" >
-                        <img src="./assets/pfp.png" width="205" height="202">
-                    </div>  
-                    <div class="informaUser">
-                        <div class="Input">
-                            <span class="detalhes">Name</span>
-                            <input type="text" id="nome" placeholder="Nome">
-                        </div>
-                        <div class="Input">
-                            <span class="detalhes">Email</span>
-                            <input type="email" id="email" placeholder="exemplo@gmail.com">
-                        </div>
-                        <div class="Input">
-                            <span class="detalhes">Senha</span>
-                            <input type="password" id="senha" placeholder="Senha">
-                        </div>
-                        <div class="Input">
-                            <span class="detalhes">Confirmar Senha</span>
-                            <input type="password" id="ConfSenha" placeholder="Confirmar Senha"> 
-                        </div>
-                        <div class="Input">
-                            <span class="detalhes">CPF</span>
-                            <input type="text" id="cpf" placeholder="CPF">
-                        </div>
-                        <div class="Input">
-                            <span class="detalhes">Numero</span>
-                            <input type="text" id="numero" placeholder="xxxxx-xxxx">
-                        </div>
-                        <div class="button">
-                            <input type="submit" id="botao" value="Confirmar">
-                        </div>
-                    </div>
-                </form>  
+<app-header-user></app-header-user>
+<div class="caixa">
+    <form action="#" method="POST">
+        <div class="pfp">
+            <input type="file" class="camera">
+            <img src="./assets/pfp.png" alt="Foto de Perfil" width="205" height="202">
+        </div>
+        <div class="informaUser">
+            <div class="Input">
+                <span class="detalhes">Nome</span>
+                <input type="text" id="nome" name="nome" placeholder="Nome" required>
             </div>
-        </main>
-    </body>
-</html>
+            <div class="Input">
+                <span class="detalhes">Email</span>
+                <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
+            </div>
+            <div class="Input">
+                <span class="detalhes">Senha</span>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            </div>
+            <div class="Input">
+                <span class="detalhes">Confirmar Senha</span>
+                <input type="password" id="ConfSenha" name="ConfSenha" placeholder="Confirmar Senha" required>
+            </div>
+            <div class="Input">
+                <span class="detalhes">CPF</span>
+                <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
+            </div>
+            <div class="Input">
+                <span class="detalhes">Número</span>
+                <input type="text" id="numero" name="numero" placeholder="xxxxx-xxxx" required>
+            </div>
+            <div class="button">
+                <input type="submit" id="botao" value="Confirmar">
+            </div>
+        </div>
+    </form>
+</div>
