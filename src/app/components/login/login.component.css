@@ -1,17 +1,62 @@
-@import "~bootstrap/dist/css/bootstrap.css";
- 
-
-
-  img{
-    margin-left: 50rem;
-    margin-top: -25.5rem; 
-    width: 45rem;
-    height: 35rem;
-   
-  }
-.form {
-    width: 320px;
-    margin: 45px auto;
-    font-size: 15px;
-    margin-top: 5rem;
+.login {
+  height: 80vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
+
+.login-form {
+  background: whitesmoke; 
+  border: 1px solid #ccc;
+  padding: 30px; 
+  padding-right: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+}
+
+.login h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+  
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-btn {
+  background: #1746A2;
+  color: #FFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #0D2F66;
+}
+
