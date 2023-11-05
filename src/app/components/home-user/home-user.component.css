@@ -7,7 +7,6 @@
 
 .areas-hotel {
   text-align: center;
-
   padding: 20px 0;
 }
 
@@ -17,8 +16,13 @@
   margin-bottom: 20px;
 }
 
+.subgrupo-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
 .subgrupo {
-  margin: 20px;
   padding: 20px;
   background: #FFF;
   border: 2.5px solid #ccc;
@@ -47,4 +51,16 @@
   height: auto;
   border-radius: 15px;
   margin-top: 20px;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca a imagem de fundo atrás do conteúdo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
