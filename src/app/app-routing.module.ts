@@ -8,6 +8,8 @@ import { AvaliarComponent } from './components/avaliar/avaliar.component';
 import { HomeUserComponent } from './components/home-user/home-user.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { GerenciarComponent } from './components/gerenciar/gerenciar.component';
+import { TicketComponent } from './components/ticket/ticket.component';
+
 
 const routes: Routes = [
   {path: 'reserva', component: ReservaComponent},
@@ -18,6 +20,7 @@ const routes: Routes = [
   {path: 'homeUser', component: HomeUserComponent},
   {path: 'perfil', component: PerfilComponent},
   {path: 'gerenciar', component: GerenciarComponent},
+  {path: 'ticket', component: TicketComponent},
 
   // aqui redirecionando quando abrir a aplicação
   { path: '', redirectTo: '/menu', pathMatch: 'full' }, // Redireciona para a rota '/menu'

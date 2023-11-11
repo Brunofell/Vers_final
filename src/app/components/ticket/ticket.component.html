@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+        <link rel="stylesheet" href="./ticket.component.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <app-header-user></app-header-user>
+    <body>  
+        <h1>
+            Abra seu ticket
+        </h1>
+        <p class="frase">
+            Caso tenha algum problema, se sinta livre para nos enviar! Nós iremos te responder o mais rapido possivel.
+        </p>
+        <main>
+            <div class="background-image" style="background-image: url('assets/fundocadastro.jpg');"></div>
+            <div class="caixa">
+                <form action="#"> 
+                    <div class="informaUser">
+                        <div class="Input">
+                            <span class="detalhes">Name</span>
+                            <input type="text" id="nome" placeholder="Nome">
+                        </div>
+                        <br>
+                        <div class="Input">
+                            <span class="detalhes">CPF</span>
+                            <input type="text" id="cpf" placeholder="CPF">
+                        </div>
+                        <br>
+                        <div class="Input2">
+                            <span class="reclamacao">Ticket</span>
+                            <textarea rows="4" id="ticket" placeholder="Escreva sua reclamação"></textarea>
+                        </div>
+                        <div class="button">
+                            <input type="submit" id="botao" value="Enviar">
+                        </div>
+                    </div>
+                </form>  
+            </div>
+        </main>
+    </body>
+</html>

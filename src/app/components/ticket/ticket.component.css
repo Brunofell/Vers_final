@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+   
+  .caixa .informaUser{ 
+      width: 600px;
+      height: 385px;
+      background: transparent;
+      border-radius: 25px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      margin: 20px 0 25px 0;
+      padding: 10px;
+  }
+  
+  
+  .informaUser .Input input{
+    height: 32px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: solid 1px;
+    padding-left: 15px;
+    font-size: 13px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+
+  #ticket{
+    width: 100%;
+    border: 1px solid;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    outline: none;
+    padding: 10px;
+
+  }
+
+
+  .informaUser .Input input:focus,
+  .informaUser .Input input:focus{
+    border-color: blue;
+  }
+
+  .informaUser .Input textarea:focus,
+  .informaUser .Input textarea:focus{
+    border-color: blue;
+  }
+  
+  .informaUser .Input .detalhes{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .informaUser .Input .reclamacao{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  h1{
+    margin-bottom: 0.8rem;
+    color: #1746A2;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    align-items: left;
+    margin-left: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .frase{
+    font-size: 19px;
+    margin-left: 0.8rem;
+    color: #1746A2;
+    margin-top: 1rem;
+  }
+
+  .button{
+    height: 45px;
+    margin: 45px 0;
+    width: 100%;
+  }
+  .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    background: linear-gradient(135deg, #0000FF, #00BFFF);
+    font-size: 18 px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+  }
+  
+  .button input:hover{
+    background: linear-gradient(-135deg, #0000FF, #00BFFF);
+  }

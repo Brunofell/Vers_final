@@ -14,6 +14,7 @@ import { MenuInicialComponent } from './components/menu-inicial/menu-inicial.com
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { ReservaComponent } from './components/reserva/reserva.component';
 import { HomeUserComponent } from './components/home-user/home-user.component';
+import { TicketComponent } from './components/ticket/ticket.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HomeUserComponent } from './components/home-user/home-user.component';
     MenuInicialComponent,
     PerfilComponent,
     ReservaComponent,
-    HomeUserComponent
+    HomeUserComponent,
+    TicketComponent
   ],
   imports: [
     BrowserModule,
