@@ -27,12 +27,11 @@ export class LoginComponent implements OnInit {
   
     this.apiService.fazerLogin(this.usuario).subscribe(
       (res) => {
-        console.log('Resposta da API:', res); // Adicione esta linha para depurar
-        // Verifique se a resposta indica um login bem-sucedido
+        console.log('Resposta da API:', res);
         if (res && res.email) {
           console.log('Login bem-sucedido');
-          this.router.navigate(['homeUser']);
-          this.apiService.mensagem('Login bem-sucedido')
+          this.router.navigate(['homeUser', res.id]); // Passa o ID do usuário na navegação
+          this.apiService.mensagem('Login bem-sucedido');
         } else {
             this.router.navigate(['login']),
             this.apiService.mensagem('Erro ao fazer Login.')
@@ -47,5 +46,6 @@ export class LoginComponent implements OnInit {
       }
     );
   }
+
 
 }

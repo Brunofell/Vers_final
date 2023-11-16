@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'cadastro', component: CadastroComponent},
   {path: 'menu', component: MenuInicialComponent},
   {path: 'avaliar', component: AvaliarComponent},
-  {path: 'homeUser', component: HomeUserComponent},
+  { path: 'homeUser/:id', component: HomeUserComponent }, //*** */
   {path: 'perfil', component: PerfilComponent},
   {path: 'gerenciar', component: GerenciarComponent},
   {path: 'ticket', component: TicketComponent},
