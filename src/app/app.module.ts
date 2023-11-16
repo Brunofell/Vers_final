@@ -16,8 +16,8 @@ import { ReservaComponent } from './components/reserva/reserva.component';
 import { HomeUserComponent } from './components/home-user/home-user.component';
 import { TicketComponent } from './components/ticket/ticket.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { HttpClientModule } from '@angular/common/http';
+
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -29,6 +29,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ApiService } from './api.service';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatSnackBarModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
