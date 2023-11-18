@@ -77,17 +77,34 @@ export class ApiService {
   }
 
   createReserva(reserva: Reserva, usuarioId: string): Observable<Reserva> {
-    const url = `${this.apiUrl}/reservas?cadastro=${usuarioId}`;  /* AQUIIIIIIIIIIII */
+    const url = `${this.apiUrl}/reservas?cadastro=${usuarioId}`; 
     return this.http.post<Reserva>(url, reserva);
   }
 
   createAvaliar(avaliar: Avaliar, usuarioId: string): Observable<Avaliar> {
-    const url = `${this.apiUrl}/avaliar?cadastro=${usuarioId}`;  /* AQUIIIIIIIIIIII */
+    const url = `${this.apiUrl}/avaliar?cadastro=${usuarioId}`; 
     return this.http.post<Avaliar>(url, avaliar);
   }
 
   createTicket(ticket: Ticket, usuarioId: string): Observable<Ticket> {
-    const url = `${this.apiUrl}/ticket?cadastro=${usuarioId}`;  /* AQUIIIIIIIIIIII */
+    const url = `${this.apiUrl}/ticket?cadastro=${usuarioId}`; 
     return this.http.post<Ticket>(url, ticket);
   }
+
+  findAll(usuarioId: string): Observable<Reserva[]> {
+    const url = `${this.apiUrl}/reservas?cadastro=${usuarioId}`
+    return this.http.get<Reserva[]>(url).pipe(
+      tap(data => console.log('Dados da reserva:', data)),
+      catchError(error => {
+        console.error('Erro ao obter reservas', error);
+        return throwError(error);
+      })
+    );
+  }
+  
+  findAllByCadastro(usuarioId: string): Observable<Reserva[]> {
+    const url = `${this.apiUrl}/reservas?cadastro=${usuarioId}`
+    return this.http.get<Reserva[]>(url)
+  }
+
 }
