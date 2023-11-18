@@ -1,43 +1,55 @@
-<app-header-user></app-header-user>
+<header>
+    <nav class="navigation">
+        <a href="/homeUser/{{ usuarioId }}" class="logo"><span>Dream</span>Place</a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="/homeUser/{{ usuarioId }}">Home</a></li> 
+            <li class="nav-item"><a href="/perfil/{{ usuarioId }}">Perfil</a></li>
+            <li class="nav-item"><a href="/reserva/{{ usuarioId }}">Reserva</a></li>
+            <li class="nav-item"><a href="/avaliar/{{ usuarioId }}">Avaliar</a></li>
+            <li class="nav-item"><a href="/menu">Sair</a></li>
+            <li class="nav-item"><a href="/gerenciar/{{ usuarioId }}">Gerenciar</a></li>
+            <li class="nav-item"><a href="/ticket/{{ usuarioId }}">Ticket</a></li>
+        </ul>
+    </nav>
+  </header>
+       
 
+    
 <div class="background-image" style="background-image: url('assets/fundologin.jpg');"></div>
 <section class="formulario">
     <div class="container">
-        <form action="" class="container__form">
+        <form  class="container__form">
             <h1 class="form__titulo">Reserva</h1>
             <h2 class="form__subtitulo">Dados do Hóspede:</h2>
             <div class="container__input">
                 <div class="form-group">
                     <label for="nome" class="input__titulo">Nome Completo</label>
-                    <input type="text" id="nome" class="form-control" required>
+                    <input [(ngModel)]="reserva.nome" name="nome" type="text" id="nome" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="email" class="input__titulo">Email</label>
-                    <input type="email" id="email" class="form-control" required>
+                    <input [(ngModel)]="reserva.email" name="email" type="email" id="email" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="telefone" class="input__titulo">Telefone</label>
-                    <input type="text" id="telefone" class="form-control" required>
+                    <input [(ngModel)]="reserva.numero" name="numero" type="text" id="telefone" class="form-control" required>
                 </div>
-                <div class="form-group">
-                    <label for="dataNascimento" class="input__titulo">Data de Nascimento</label>
-                    <input type="date" id="dataNascimento" class="form-control input__data" required>
-                </div>
+
             </div>
 
             <h2 class="form__subtitulo">Detalhes da Reserva:</h2>
             <div class="container__input">
                 <div class="form-group">
                     <label for="checkIn" class="input__titulo">Check-in</label>
-                    <input type="date" id="checkIn" class="form-control input__data" required>
+                    <input [(ngModel)]="reserva.checkIn" name="checkIn" type="date" id="checkIn" class="form-control input__data" required>
                 </div>
                 <div class="form-group">
                     <label for="checkOut" class="input__titulo">Check-out</label>
-                    <input type="date" id="checkOut" class="form-control input__data" required>
+                    <input [(ngModel)]="reserva.checkOut" name="checkOut" type="date" id="checkOut" class="form-control input__data" required>
                 </div>
                 <div class="form-group">
                     <label for="quarto" class="input__titulo">Tipo de Quarto</label>
-                    <select id="quarto" class="form-control input__select">
+                    <select [(ngModel)]="reserva.quarto" name="quarto" id="quarto" class="form-control input__select">
                         <option value="individual">Individual</option>
                         <option value="duplo">Duplo</option>
                         <option value="suíte">Suíte</option>
@@ -50,7 +62,7 @@
                 <div class="form-group">
                     <label for="pagamento" class="input__titulo">Tipo de Pagamento</label>
                     <p class="subtitulo">* O pagamento será realizado no hotel.</p>
-                    <select id="pagamento" class="form-control input__select">
+                    <select [(ngModel)]="reserva.pagamento" name="pagamento" id="pagamento" class="form-control input__select">
                         <option value="credito">Crédito</option>
                         <option value="debito">Débito</option>
                         <option value="pix">Pix</option>
@@ -59,7 +71,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="form__button">Enviar</button>
+            <button (click)="create()"  type="submit" class="form__button" >Enviar</button>
         </form>
     </div>
 </section>

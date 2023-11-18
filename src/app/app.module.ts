@@ -45,13 +45,14 @@ import { ApiService } from './api.service';
     PerfilComponent,
     ReservaComponent,
     HomeUserComponent,
-    TicketComponent
+    TicketComponent,
+
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,

@@ -1,39 +1,62 @@
-<app-header-user></app-header-user>
-<div class="background-image" style="background-image: url('assets/fundocadastro.jpg');"></div>
-<div class="caixa">
-    <form action="#" method="POST">
-        <div class="pfp">
-            <input type="file" class="camera">
-            <img src="./assets/pfp.png" alt="Foto de Perfil" width="205" height="202">
-        </div>
-        <div class="informaUser">
-            <div class="Input">
-                <span class="detalhes">Nome</span>
-                <input type="text" id="nome" name="nome" placeholder="Nome" required>
-            </div>
-            <div class="Input">
-                <span class="detalhes">Email</span>
-                <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
-            </div>
-            <div class="Input">
-                <span class="detalhes">Senha</span>
-                <input type="password" id="senha" name="senha" placeholder="Senha" required>
-            </div>
-            <div class="Input">
-                <span class="detalhes">Confirmar Senha</span>
-                <input type="password" id="ConfSenha" name="ConfSenha" placeholder="Confirmar Senha" required>
-            </div>
-            <div class="Input">
-                <span class="detalhes">CPF</span>
-                <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
-            </div>
-            <div class="Input">
-                <span class="detalhes">Número</span>
-                <input type="text" id="numero" name="numero" placeholder="xxxxx-xxxx" required>
-            </div>
-            <div class="button">
-                <input type="submit" id="botao" value="Confirmar">
-            </div>
-        </div>
-    </form>
-</div>
+<header>
+    <nav class="navigation">
+        <a href="/homeUser/{{ usuarioId }}" class="logo"><span>Dream</span>Place</a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="/homeUser/{{ usuarioId }}">Home</a></li> 
+            <li class="nav-item"><a href="/perfil/{{ usuarioId }}">Perfil</a></li>
+            <li class="nav-item"><a href="/reserva/{{ usuarioId }}">Reserva</a></li>
+            <li class="nav-item"><a href="/avaliar/{{ usuarioId }}">Avaliar</a></li>
+            <li class="nav-item"><a href="/menu">Sair</a></li>
+            <li class="nav-item"><a href="/gerenciar/{{ usuarioId }}">Gerenciar</a></li>
+            <li class="nav-item"><a href="/ticket/{{ usuarioId }}">Ticket</a></li>
+        </ul>
+    </nav>
+  </header>
+       
+    
+  <div class="background-image" style="background-image: url('assets/fundocadastro.jpg');"></div>
+  <div class="caixa">
+      <form (submit)="updateProfile()">
+          <div class="informaUser">
+              <div class="Input">
+                  <span class="detalhes">Nome</span>
+                  <input type="text" id="nome" name="nome" [(ngModel)]="cadastro.nome" required>
+                  <div class="button">
+                    <input type="submit" id="botao" value="Confirmar">
+                  </div>
+              </div>
+              <div class="Input">
+                  <span class="detalhes">Email</span>
+                  <input type="email" id="email" name="email" [(ngModel)]="cadastro.email" placeholder="exemplo@gmail.com" required>
+                  <div class="button">
+                    <input type="submit" id="botao" value="Confirmar">
+                  </div>
+              </div>
+              <div class="Input">
+                  <span class="detalhes">Senha</span>
+                  <input type="password" id="senha" name="senha" [(ngModel)]="cadastro.senha" placeholder="Senha" required>
+                  <div class="button">
+                    <input type="submit" id="botao" value="Confirmar">
+                  </div>
+              </div>
+              <div class="Input">
+                  <span class="detalhes">CPF</span>
+                  <input type="text" id="cpf" name="cpf" [(ngModel)]="cadastro.cpf" placeholder="CPF" required>
+                  <div class="button">
+                    <input type="submit" id="botao" value="Confirmar">
+                  </div>
+              </div>
+              <div class="Input">
+                  <span class="detalhes">Número</span>
+                  <input type="text" id="numero" name="numero" [(ngModel)]="cadastro.numero" placeholder="xxxxx-xxxx" required>
+                  <div class="button">
+                    <input type="submit" id="botao" value="Confirmar">
+                  </div>
+              </div>
+          </div>
+      </form>
+      <div class="Input">
+        <button type="button" (click)="delete()" class="btn-delete">Deletar Conta</button>
+    </div>
+  </div>
+  

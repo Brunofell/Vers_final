@@ -1,45 +1,45 @@
-<!DOCTYPE html>
-<html lang="pt">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
-        <link rel="stylesheet" href="./ticket.component.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <app-header-user></app-header-user>
-    <body>  
-        <h1>
-            Abra seu ticket
-        </h1>
-        <p class="frase">
-            Caso tenha algum problema, se sinta livre para nos enviar! Nós iremos te responder o mais rapido possivel.
-        </p>
-        <main>
-            <div class="background-image" style="background-image: url('assets/fundocadastro.jpg');"></div>
-            <div class="caixa">
-                <form action="#"> 
-                    <div class="informaUser">
-                        <div class="Input">
-                            <span class="detalhes">Name</span>
-                            <input type="text" id="nome" placeholder="Nome">
+<header>
+    <nav class="navigation">
+        <a href="/homeUser/{{ usuarioId }}" class="logo"><span>Dream</span>Place</a>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="/homeUser/{{ usuarioId }}">Home</a></li> 
+            <li class="nav-item"><a href="/perfil/{{ usuarioId }}">Perfil</a></li>
+            <li class="nav-item"><a href="/reserva/{{ usuarioId }}">Reserva</a></li>
+            <li class="nav-item"><a href="/avaliar/{{ usuarioId }}">Avaliar</a></li>
+            <li class="nav-item"><a href="/menu">Sair</a></li>
+            <li class="nav-item"><a href="/gerenciar/{{ usuarioId }}">Gerenciar</a></li>
+            <li class="nav-item"><a href="/ticket/{{ usuarioId }}">Ticket</a></li>
+        </ul>
+    </nav>
+  </header>
+
+            
+        <div class="background-image" style="background-image: url('assets/hotelTop.jpg');"></div>
+        <section class="formulario">
+            <div class="container">
+                <form action="" class="container__form">
+        
+                    <h1 class="form__titulo">Avaliar</h1>
+                    <h2 class="form__subtitulo">Dados do Hóspede:</h2>
+        
+                    <div class="container__input">
+                        <div class="form-group">
+                            <label for="nome" class="input__titulo">Nome Completo</label>
+                            <input  [(ngModel)]="ticket.nome" name="nome" type="text" id="nome" class="form-control" required>
                         </div>
-                        <br>
-                        <div class="Input">
-                            <span class="detalhes">CPF</span>
-                            <input type="text" id="cpf" placeholder="CPF">
+                        <div class="form-group">
+                            <label for="email" class="input__titulo">CPF</label>
+                            <input [(ngModel)]="ticket.cpf" name="cpf"  type="cpf" id="cpf" class="form-control" required>
                         </div>
-                        <br>
-                        <div class="Input2">
-                            <span class="reclamacao">Ticket</span>
-                            <textarea rows="4" id="ticket" placeholder="Escreva sua reclamação"></textarea>
+                        <div class="form-group">
+                            <label for="ticket" class="input__titulo">Ticket</label>
+                            <textarea [(ngModel)]="ticket.ticket" name="ticket" rows="4" id="ticket" placeholder="Escreva sua reclamação"></textarea>
                         </div>
-                        <div class="button">
-                            <input type="submit" id="botao" value="Enviar">
-                        </div>
+
                     </div>
-                </form>  
+        
+                    <button  (click)="create()"  type="submit" class="form__button">Enviar</button>
+                </form>
             </div>
-        </main>
-    </body>
-</html>
+        </section>
+        

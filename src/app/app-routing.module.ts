@@ -12,15 +12,15 @@ import { TicketComponent } from './components/ticket/ticket.component';
 
 
 const routes: Routes = [
-  {path: 'reserva', component: ReservaComponent},
+  {path: 'reserva/:id', component: ReservaComponent },
   {path: 'login', component: LoginComponent},
   {path: 'cadastro', component: CadastroComponent},
   {path: 'menu', component: MenuInicialComponent},
-  {path: 'avaliar', component: AvaliarComponent},
-  { path: 'homeUser/:id', component: HomeUserComponent }, //*** */
-  {path: 'perfil', component: PerfilComponent},
-  {path: 'gerenciar', component: GerenciarComponent},
-  {path: 'ticket', component: TicketComponent},
+  {path: 'avaliar/:id', component: AvaliarComponent},
+  {path: 'homeUser/:id', component: HomeUserComponent },
+  {path: 'perfil/:id', component: PerfilComponent },
+  {path: 'gerenciar/:id', component: GerenciarComponent},
+  {path: 'ticket/:id', component: TicketComponent},
 
   // aqui redirecionando quando abrir a aplicação
   { path: '', redirectTo: '/menu', pathMatch: 'full' }, // Redireciona para a rota '/menu'
