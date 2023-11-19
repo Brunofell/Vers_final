@@ -107,4 +107,28 @@ export class ApiService {
     return this.http.get<Reserva[]>(url)
   }
 
+  findByIdReserva(id: String):Observable<Reserva>{
+    const url = `${this.apiUrl}/reservas/${id}`
+    return this.http.get<Reserva>(url)
+  }
+
+  update(reserva: Reserva): Observable<Reserva> {
+    const url = `${this.apiUrl}/reservas/${reserva.id}`;
+    const body = { 
+      nome: reserva.nome,
+      email: reserva.email,
+      numero: reserva.numero,
+      checkIn: reserva.checkIn,
+      checkOut: reserva.checkOut,
+      quarto: reserva.quarto,
+      pagamento: reserva.pagamento
+    };
+    return this.http.put<Reserva>(url, body);
+  }
+
+  deleteReserva(id: String):Observable<void> {
+    const url = `${this.apiUrl}/reservas/${id}`
+    return this.http.delete<void>(url)
+  }
+
 }

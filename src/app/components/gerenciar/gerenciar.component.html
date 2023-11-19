@@ -16,11 +16,11 @@
    
   <div class="content">
     <div class="title">
-        <h1>RESERVAS</h1>
+        <h1 class="titulo">RESERVAS</h1>
     </div>
 
-
-    <button  class="botao" mat-stroked-button color="primary" routerLink="/reserva/{{ usuarioId }}">NOVO RESERVA</button>
+    
+    <button  class="botao" mat-stroked-button color="white" routerLink="/reserva/{{ usuarioId }}">NOVO RESERVA</button>
 
     <table mat-table   class="mat-elevation-z8 tabela" [dataSource]="reservas">
       
@@ -61,10 +61,27 @@
             <td mat-cell *matCellDef="let row"> {{ row.nome }} </td>
           </ng-container>
 
+
+          <ng-container matColumnDef="acoes">
+            <th mat-header-cell *matHeaderCellDef> AÇÕES </th>
+            <td mat-cell *matCellDef="let row"> 
+              <a class="edit" routerLink="/update/{{ usuarioId }}/{{ row.id }}">
+                <img class="black" src="assets/editar_black.png" alt="editar">
+                <img class="blue" src="assets/editar_blue.png" alt="editar" >
+              </a>
+              <a class="delete" (click)="confirmarDelecao(row.id)">
+                <img class="black" src="assets/delete_black.png" alt="Deletar">
+                <img class="red" src="assets/delete_red.png" alt="Deletar" >
+              </a>
+            </td>
+          </ng-container>
+
       
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
+
+      
       
       
 </div>

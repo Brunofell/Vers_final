@@ -9,6 +9,8 @@ import { HomeUserComponent } from './components/home-user/home-user.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { GerenciarComponent } from './components/gerenciar/gerenciar.component';
 import { TicketComponent } from './components/ticket/ticket.component';
+import { DeleteComponent } from './components/gerenciar/delete/delete.component';
+import { UpdateComponent } from './components/gerenciar/update/update.component';
 
 
 const routes: Routes = [
@@ -21,6 +23,8 @@ const routes: Routes = [
   {path: 'perfil/:id', component: PerfilComponent },
   {path: 'gerenciar/:id', component: GerenciarComponent},
   {path: 'ticket/:id', component: TicketComponent},
+  {path: 'delete/:id', component: DeleteComponent},
+  {path: 'update/:id/:id_cad', component: UpdateComponent}, // 'categorias/:id_cat/livros/:id/update'
 
   // aqui redirecionando quando abrir a aplicação
   { path: '', redirectTo: '/menu', pathMatch: 'full' }, // Redireciona para a rota '/menu'

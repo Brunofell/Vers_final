@@ -30,6 +30,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ApiService } from './api.service';
+import { DeleteComponent } from './components/gerenciar/delete/delete.component';
+import { UpdateComponent } from './components/gerenciar/update/update.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { ApiService } from './api.service';
     ReservaComponent,
     HomeUserComponent,
     TicketComponent,
+    DeleteComponent,
+    UpdateComponent,
 
     
   ],

@@ -28,6 +28,8 @@
   .logo span {
     color: #5F9DF7;
   }
+
+
   
   .navigation .logo:hover {
     font-size: 1.8rem;
@@ -62,7 +64,8 @@
 
 .botao{
     margin-bottom: 1rem;
-    border: #3F51B5;
+    background-color: #6171cc;
+    
 }
 
 .title{
@@ -71,44 +74,57 @@
 }
 
 .title h1{
-    font-size: 2rem;
-    color: #cecbcb;
+  color: #1746A2;
+  font-size: 1.7rem;
+  font-weight: 600;
+  transition: all 0.5s;
 }
 
 .tabela{
-    background-color: #111111;
+  background-color:rgb(241, 232, 221);
     width: 100%;
 
 }
 
 th{
-    color: #FFFFFF;
+    color: #000000;
 }
 
 td{
-    color: #FFFFFF;
+  color: #000000;
 }
 
 .edit{
-    color: #FFFFFF;
+  color: #000000;
 }
 
 .delete{
-    color: #FFFFFF;
+  color: #000000;
 }
 
-.edit:hover{
-    color: rgb(0, 4, 253);
+
+.delete img.red {
+  display: none;
 }
 
-.delete:hover{
-    color: #ff0000;
+
+.delete:hover img.black {
+  display: none;
 }
 
-.book{
-    color: #FFFFFF;
+.delete:hover img.red {
+  display: inline;
 }
 
-.book:hover{
-    color: rgb(52, 243, 4);
+.edit img.blue {
+  display: none;
+}
+
+
+.edit:hover img.black {
+  display: none;
+}
+
+.edit:hover img.blue {
+  display: inline;
 }
