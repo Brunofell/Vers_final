@@ -68,4 +68,9 @@ export class UpdateComponent implements OnInit  {
     })
   }
 
+  cancelar(): void{
+    this.location.back();
+    this.apiService.mensagem('Operação cancelada');
+  }
+
 }

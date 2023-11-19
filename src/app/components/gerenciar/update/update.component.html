@@ -1,15 +1,7 @@
 <header>
     <nav class="navigation">
-        <a href="/homeUser/{{ usuarioId }}" class="logo"><span>Dream</span>Place</a>
-        <ul class="nav-menu">
-            <li class="nav-item"><a href="/homeUser/{{ usuarioId }}">Home</a></li> 
-            <li class="nav-item"><a href="/perfil/{{ usuarioId }}">Perfil</a></li>
-            <li class="nav-item"><a href="/reserva/{{ usuarioId }}">Reserva</a></li>
-            <li class="nav-item"><a href="/avaliar/{{ usuarioId }}">Avaliar</a></li>
-            <li class="nav-item"><a href="/menu">Sair</a></li>
-            <li class="nav-item"><a href="/gerenciar/{{ usuarioId }}">Gerenciar</a></li>
-            <li class="nav-item"><a href="/ticket/{{ usuarioId }}">Ticket</a></li>
-        </ul>
+        <a class="logo" disabled><span>Dream</span>Place</a>
+
     </nav>
   </header>
 
@@ -71,6 +63,8 @@
             </div>
 
             <button (click)="update(usuarioId)"  type="submit" class="form__button" >Enviar</button>
+            <button (click)="cancelar()"  type="submit" class="form__button" >Cancelar</button>
         </form>
+        
     </div>
 </section>
