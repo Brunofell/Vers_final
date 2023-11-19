@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 export class GerenciarComponent implements OnInit {
 
   reservas!: Observable<Reserva[]>; // Use um Observable para a fonte de dados
-  displayedColumns: string[] = ['id', 'nome', 'email', 'checkIn', 'checkOut', 'quarto', 'pagamento', 'acoes'];
+  displayedColumns: string[] = ['id', 'nome','numero', 'email', 'checkIn', 'checkOut', 'quarto', 'pagamento', 'acoes'];
   usuarioId!: string;
 
   constructor(private route: ActivatedRoute, private apiService: ApiService, private router: Router) {}

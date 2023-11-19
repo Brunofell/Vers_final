@@ -59,12 +59,21 @@ export class PerfilComponent implements OnInit {
 
 
   delete(): void {
-    this.apiService.delete(this.usuarioId!).subscribe((resposta)=>{
-      this.router.navigate(['menu'])
-      this.apiService.mensagem('Usuario deletada com sucesso!')
-    }, err => {
-      this.apiService.mensagem(err.error.error)
-    })
-
+    const confirmDelete = window.confirm('Tem certeza de que deseja deletar sua conta?');
+  
+    if (confirmDelete) {
+      this.apiService.delete(this.usuarioId!).subscribe(
+        (resposta) => {
+          this.router.navigate(['menu']);
+          this.apiService.mensagem('Usuário deletado com sucesso!');
+        },
+        (err) => {
+          this.apiService.mensagem(err.error.error);
+        }
+      );
+    } else {
+      // Ação a ser realizada caso o usuário cancele a exclusão
+      console.log('Exclusão cancelada pelo usuário');
+    }
   }
 }

@@ -33,6 +33,11 @@
           <th mat-header-cell *matHeaderCellDef> NOME</th>
           <td mat-cell *matCellDef="let row"> {{ row.nome }} </td>
         </ng-container>
+
+        <ng-container matColumnDef="numero">
+          <th mat-header-cell *matHeaderCellDef> TELEFONE </th>
+          <td mat-cell *matCellDef="let row"> {{ row.numero }} </td>
+        </ng-container>
       
         <ng-container matColumnDef="email">
             <th mat-header-cell *matHeaderCellDef> EMAIL</th>
@@ -58,14 +63,14 @@
       
           <ng-container matColumnDef="pagamento">
             <th mat-header-cell *matHeaderCellDef> PAGAMENTO</th>
-            <td mat-cell *matCellDef="let row"> {{ row.nome }} </td>
+            <td mat-cell *matCellDef="let row"> {{ row.pagamento }} </td>
           </ng-container>
 
 
           <ng-container matColumnDef="acoes">
             <th mat-header-cell *matHeaderCellDef> AÇÕES </th>
             <td mat-cell *matCellDef="let row"> 
-              <a class="edit" routerLink="/update/{{ usuarioId }}/{{ row.id }}">
+             <a class="edit" routerLink="/update/{{ row.id }}/{{ usuarioId }}"> <!--   routerLink="/update/{{ row.id }}/{{ usuarioId }}" -->
                 <img class="black" src="assets/editar_black.png" alt="editar">
                 <img class="blue" src="assets/editar_blue.png" alt="editar" >
               </a>

@@ -3,8 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { Observable } from 'rxjs';
 import { Reserva } from '../../reserva/reserva.model';
-
-
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-update',
   templateUrl: './update.component.html',
@@ -27,7 +26,7 @@ export class UpdateComponent implements OnInit  {
   }
   usuarioId!: string;
 
-  constructor(private route: ActivatedRoute, private apiService: ApiService, private router: Router) {}
+  constructor(private route: ActivatedRoute, private apiService: ApiService, private router: Router, private location: Location) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -44,14 +43,19 @@ export class UpdateComponent implements OnInit  {
     })
   }
 
-  update():void {
-    this.apiService.update(this.reserva).subscribe((resposta) => {
-      this.router.navigate([`cadastros/${this.id_cat}/reservas`]);
-      this.apiService.mensagem('Reserva atualizado com sucesso!')
-    }, err => {
-      this.router.navigate([`cadastros/${this.id_cat}/reservas`]);
-      this.apiService.mensagem('Falha ao atualizar reserva! Tente mais tarde..')
-    })
+  update(id: string): void {
+    this.apiService.update(this.reserva).subscribe(
+      (resposta) => {
+        // Navegar para a página anterior
+        this.location.back();
+        this.apiService.mensagem('Reserva atualizada com sucesso!');
+      },
+      (err) => {
+        // Navegar para a página anterior
+        this.location.back();
+        this.apiService.mensagem('Falha ao atualizar reserva! Tente mais tarde..');
+      }
+    );
   }
 
   delete(): void{
